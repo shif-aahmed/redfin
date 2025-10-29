@@ -1,0 +1,155 @@
+.search-links-section {
+  width: 100%;
+  padding: 60px 40px;
+  background-color: white;
+}
+
+.search-links-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-links-group {
+  margin-bottom: 25px;
+}
+
+.search-links-group:last-child {
+  margin-bottom: 0;
+}
+
+.search-links-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.search-links-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.view-full-list-link {
+  font-size: 14px;
+  color: #0066cc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.view-full-list-link:hover {
+  text-decoration: underline;
+}
+
+.search-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px 24px;
+  margin-bottom: 16px;
+}
+
+.search-link {
+  font-size: 14px;
+  color: #0066cc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.search-link:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #0066cc;
+  cursor: pointer;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.show-more-btn:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .search-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .search-links-section {
+    padding: 40px 20px;
+  }
+  
+  .search-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 16px;
+  }
+  
+  .search-links-group-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.additional-links-section {
+  margin-top: 48px;
+  padding-top: 32px;
+}
+
+.additional-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.disclaimer-section {
+  margin-top: 48px;
+  padding-top: 32px;
+}
+
+.disclaimer-text {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.disclaimer-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.disclaimer-link:hover {
+  text-decoration: underline;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-top: 48px;
+}
+
