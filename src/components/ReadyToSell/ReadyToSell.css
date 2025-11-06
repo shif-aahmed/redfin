@@ -1,0 +1,129 @@
+.ready-to-sell-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.ready-to-sell-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ready-to-sell-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ready-to-sell-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ready-to-sell-heading {
+  font-size: 40px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.2;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.ready-to-sell-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ready-to-sell-instruction {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.ready-to-sell-form {
+  width: 100%;
+}
+
+.ready-to-sell-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ready-to-sell-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.ready-to-sell-input:focus {
+  border-color: #d32f2f;
+}
+
+.ready-to-sell-input::placeholder {
+  color: #999;
+}
+
+.ready-to-sell-button {
+  padding: 14px 32px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.ready-to-sell-button:hover {
+  background-color: #b71c1c;
+}
+
+.ready-to-sell-button:focus {
+  outline: none;
+}
+
+.ready-to-sell-disclaimer {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .ready-to-sell-section {
+    padding: 60px 24px;
+  }
+
+  .ready-to-sell-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ready-to-sell-heading {
+    font-size: 32px;
+  }
+
+  .ready-to-sell-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ready-to-sell-button {
+    width: 100%;
+  }
+}
+
+

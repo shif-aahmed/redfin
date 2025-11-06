@@ -20,12 +20,20 @@ import CondosForSale from './Pages/CondosForSale'
 import LandForSale from './Pages/LandForSale'
 import OpenHouses from './Pages/OpenHouses'
 import BuyWithRedfin from './Pages/BuyWithRedfin'
+import RedfinPremier from './Pages/RedfinPremier'
+import HomebuyingGuide from './Pages/HomebuyingGuide'
+import FreeHomeBuyingClasses from './Pages/FreeHomeBuyingClasses'
+import USHousingMarket from './Pages/USHousingMarket'
 import './App.css'
 
 function AppContent() {
   const location = useLocation()
   const isPropertyDetail = location.pathname.startsWith('/property/')
   const isBuyWithRedfinPage = location.pathname === '/buy-with-redfin'
+  const isRedfinPremierPage = location.pathname === '/redfin-premier'
+  const isHomebuyingGuidePage = location.pathname === '/homebuying-guide'
+  const isFreeHomeBuyingClassesPage = location.pathname === '/free-home-buying-classes'
+  const isUSHousingMarketPage = location.pathname === '/us-housing-market'
 
   return (
     <>
@@ -39,8 +47,12 @@ function AppContent() {
         <Route path="/land-for-sale" element={<LandForSale />} />
         <Route path="/open-houses" element={<OpenHouses />} />
         <Route path="/buy-with-redfin" element={<BuyWithRedfin />} />
+        <Route path="/redfin-premier" element={<RedfinPremier />} />
+        <Route path="/homebuying-guide" element={<HomebuyingGuide />} />
+        <Route path="/free-home-buying-classes" element={<FreeHomeBuyingClasses />} />
+        <Route path="/us-housing-market" element={<USHousingMarket />} />
       </Routes>
-      {!isBuyWithRedfinPage && (
+      {!isBuyWithRedfinPage && !isRedfinPremierPage && !isHomebuyingGuidePage && !isFreeHomeBuyingClassesPage && !isUSHousingMarketPage && (
         <>
           <ChicagoHousesForSale />
           <SeattleHousesForSale />
@@ -55,7 +67,7 @@ function AppContent() {
           <PopularSearchesNearMe />
         </>
       )}
-      <Footer />
+      {!isFreeHomeBuyingClassesPage && <Footer />}
     </>
   )
 }

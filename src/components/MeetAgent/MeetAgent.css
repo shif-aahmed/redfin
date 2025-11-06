@@ -1,0 +1,145 @@
+.meet-agent-section {
+  width: 100%;
+  background-color: #faf9f6;
+  padding: 80px 24px;
+}
+
+.meet-agent-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.meet-agent-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.meet-agent-left {
+  flex: 1;
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.meet-agent-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.5px;
+}
+
+.meet-agent-description {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.meet-agent-right {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.meet-agent-search-container {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.meet-agent-search-input {
+  flex: 1;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #333;
+  background-color: white;
+}
+
+.meet-agent-search-input::placeholder {
+  color: #999;
+}
+
+.meet-agent-search-button {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  white-space: nowrap;
+}
+
+.meet-agent-search-button:hover {
+  background-color: #222;
+}
+
+.meet-agent-search-button:focus {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .meet-agent-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .meet-agent-left {
+    max-width: 100%;
+  }
+  
+  .meet-agent-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .meet-agent-search-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .meet-agent-section {
+    padding: 60px 24px;
+  }
+  
+  .meet-agent-heading {
+    font-size: 36px;
+  }
+  
+  .meet-agent-description {
+    font-size: 16px;
+  }
+  
+  .meet-agent-search-container {
+    flex-direction: column;
+  }
+  
+  .meet-agent-search-input {
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .meet-agent-search-button {
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+
+

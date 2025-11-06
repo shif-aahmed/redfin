@@ -1,0 +1,240 @@
+.agents-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.agents-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.agents-content {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  min-height: 600px;
+}
+
+.agents-image-wrapper {
+  flex: 1;
+  min-width: 50%;
+  overflow: hidden;
+}
+
+.agents-property-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.agents-info-panel {
+  flex: 0 0 400px;
+  background-color: #363636;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.agents-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.agents-location {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.agents-price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.agents-price {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.agents-sold-badge {
+  background-color: #d32f2f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.agents-agent-section {
+  margin-bottom: 40px;
+}
+
+.agents-agent-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.agents-agent-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.agents-agent-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.agents-agent-name {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #d2691e;
+}
+
+.agents-view-button {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 30px;
+}
+
+.agents-view-button:hover {
+  background-color: #666;
+}
+
+.agents-view-button:focus {
+  outline: none;
+}
+
+.agents-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.agents-nav-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.agents-nav-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.agents-nav-arrow:focus {
+  outline: none;
+}
+
+.agents-nav-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.agents-slide-indicator {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .agents-content {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .agents-image-wrapper {
+    min-width: unset;
+    height: 400px;
+  }
+
+  .agents-info-panel {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .agents-section {
+    padding: 60px 24px;
+  }
+
+  .agents-info-panel {
+    padding: 40px 24px;
+  }
+
+  .agents-price {
+    font-size: 28px;
+  }
+
+  .agents-location {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agents-section {
+    padding: 40px 16px;
+  }
+
+  .agents-info-panel {
+    padding: 30px 20px;
+  }
+
+  .agents-price {
+    font-size: 24px;
+  }
+
+  .agents-agent-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

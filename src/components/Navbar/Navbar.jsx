@@ -66,14 +66,14 @@ function Navbar() {
                   <div className="dropdown-column">
                     <h3>Buying Options</h3>
                     <Link to="/buy-with-redfin">Buy with Redfin</Link>
-                    <a href="#">Redfin Premier</a>
+                    <Link to="/redfin-premier">Redfin Premier</Link>
                   </div>
                   <div className="dropdown-column">
                     <h3>Buying Resources</h3>
                     <a href="#">Affordability calculator</a>
-                    <a href="#">Home buying guide</a>
-                    <a href="#">Free home buying classes</a>
-                    <a href="#">US housing market</a>
+                    <Link to="/homebuying-guide">Home buying guide</Link>
+                    <Link to="/free-home-buying-classes">Free home buying classes</Link>
+                    <Link to="/us-housing-market">US housing market</Link>
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ function Navbar() {
                   <div className="dropdown-column">
                     <h3>Selling Options</h3>
                     <a href="#">Sell with Redfin</a>
-                    <a href="#">Redfin Premier</a>
+                    <Link to="/redfin-premier">Redfin Premier</Link>
                     <a href="#">RedfinNow</a>
                   </div>
                   <div className="dropdown-column">
@@ -196,14 +196,14 @@ function Navbar() {
                 <div className="sidebar-submenu-column">
                   <h3>Buying Options</h3>
                   <Link to="/buy-with-redfin" onClick={closeSidebar}>Buy with Redfin</Link>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Redfin Premier</a>
+                  <Link to="/redfin-premier" onClick={closeSidebar}>Redfin Premier</Link>
                 </div>
                 <div className="sidebar-submenu-column">
                   <h3>Buying Resources</h3>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Affordability calculator</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Home buying guide</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Free home buying classes</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>US housing market</a>
+                  <Link to="/homebuying-guide" onClick={closeSidebar}>Home buying guide</Link>
+                  <Link to="/free-home-buying-classes" onClick={closeSidebar}>Free home buying classes</Link>
+                  <Link to="/us-housing-market" onClick={closeSidebar}>US housing market</Link>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@ function Navbar() {
                 <div className="sidebar-submenu-column">
                   <h3>Selling Options</h3>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Sell with Redfin</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Redfin Premier</a>
+                  <Link to="/redfin-premier" onClick={closeSidebar}>Redfin Premier</Link>
                   <a href="#" onClick={(e)=>e.preventDefault()}>RedfinNow</a>
                 </div>
                 <div className="sidebar-submenu-column">

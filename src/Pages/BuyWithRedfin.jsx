@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import GetPrequalified from '../components/GetPrequalified/GetPrequalified'
+import LuxuryProperty from '../components/LuxuryProperty/LuxuryProperty'
+import CurrentHome from '../components/CurrentHome/CurrentHome'
+import RedfinApp from '../components/RedfinApp/RedfinApp'
 import './BuyWithRedfin.css'
 
 function BuyWithRedfin() {
@@ -52,6 +56,10 @@ function BuyWithRedfin() {
           </div>
         </div>
       </div>
+      <GetPrequalified />
+      <LuxuryProperty />
+      <CurrentHome />
+      <RedfinApp />
     </>
   )
 }

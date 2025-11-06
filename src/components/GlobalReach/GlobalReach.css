@@ -1,0 +1,194 @@
+.global-reach-section {
+  width: 100%;
+  background-color: #f8f7f5;
+}
+
+.global-reach-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.global-reach-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.global-reach-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.global-reach-heading-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.global-reach-line {
+  width: 2px;
+  background-color: #8B453A;
+  flex-shrink: 0;
+}
+
+.global-reach-heading-content {
+  flex: 1;
+}
+
+.global-reach-heading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px 0;
+}
+
+.global-reach-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.global-reach-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.global-reach-point {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.global-reach-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.media-logos-panel {
+  background-color: #363636;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  min-height: 300px;
+}
+
+.media-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.media-logo-text {
+  color: white;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.media-logo-text.wsj {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.media-logo-text.mansion {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.media-logo-text.marketwatch {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.media-logo-text.barrons {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+
+  .global-reach-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .global-reach-left,
+  .global-reach-right {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .media-logos-panel {
+    max-width: 100%;
+    padding: 30px;
+    gap: 20px;
+    min-height: 250px;
+  }
+
+  .global-reach-points {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .media-logos-panel {
+    padding: 20px;
+    gap: 15px;
+    min-height: 200px;
+  }
+
+  .media-logo-text.wsj {
+    font-size: 16px;
+  }
+
+  .media-logo-text.mansion {
+    font-size: 18px;
+  }
+
+  .media-logo-text.marketwatch {
+    font-size: 18px;
+  }
+
+  .media-logo-text.barrons {
+    font-size: 22px;
+  }
+
+  .global-reach-heading {
+    font-size: 16px;
+  }
+
+  .global-reach-description {
+    font-size: 14px;
+  }
+
+  .global-reach-point {
+    font-size: 14px;
+  }
+}
+

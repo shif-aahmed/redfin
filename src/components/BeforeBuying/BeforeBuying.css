@@ -1,0 +1,91 @@
+.before-buying-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.before-buying-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.before-buying-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.before-buying-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.before-buying-heading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.before-buying-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.before-buying-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.before-buying-image-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.before-buying-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .before-buying-section {
+    padding: 60px 24px;
+  }
+
+  .before-buying-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .before-buying-heading {
+    font-size: 32px;
+  }
+
+  .before-buying-left,
+  .before-buying-right {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .before-buying-section {
+    padding: 40px 16px;
+  }
+
+  .before-buying-heading {
+    font-size: 28px;
+  }
+}
+
+

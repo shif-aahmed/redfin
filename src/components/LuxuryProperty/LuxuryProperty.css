@@ -1,0 +1,120 @@
+.luxury-property-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.luxury-property-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.luxury-property-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.luxury-property-left {
+  flex: 1;
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.luxury-property-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.luxury-property-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.luxury-property-button {
+  background-color: #e51937;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.luxury-property-button:hover {
+  background-color: #c4142f;
+}
+
+.luxury-property-button:focus {
+  outline: none;
+}
+
+.luxury-property-right {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.luxury-property-image-container {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-property-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .luxury-property-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .luxury-property-left {
+    max-width: 100%;
+  }
+  
+  .luxury-property-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-property-section {
+    padding: 60px 24px;
+  }
+  
+  .luxury-property-heading {
+    font-size: 36px;
+  }
+  
+  .luxury-property-description {
+    font-size: 16px;
+  }
+  
+  .luxury-property-button {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+

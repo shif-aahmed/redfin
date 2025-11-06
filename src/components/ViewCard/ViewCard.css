@@ -1,0 +1,291 @@
+.view-card-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.view-card-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.view-card-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.view-card-left {
+  flex: 0 0 320px;
+  min-width: 280px;
+  position: relative;
+  height: 100%;
+}
+
+.agent-card {
+  background-color: #faf9f6;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agent-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.agent-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.agent-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 24px 20px 16px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.agent-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 20px 20px;
+}
+
+.achievement-box {
+  background-color: #f5f5f0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  text-align: center;
+}
+
+.view-profile-button {
+  width: calc(100% - 40px);
+  margin: 0 20px 24px;
+  padding: 12px 24px;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.view-profile-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.view-profile-button:focus {
+  outline: none;
+}
+
+.view-card-right {
+  flex: 1;
+  min-width: 400px;
+  position: relative;
+}
+
+.property-display {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.property-image-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 75%;
+  overflow: hidden;
+}
+
+.property-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.property-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.property-location {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.property-price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.property-price {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.property-sold-badge {
+  background-color: #8B4513;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.property-nav-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(51, 51, 51, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.property-nav-button:hover {
+  background-color: rgba(51, 51, 51, 1);
+}
+
+.property-nav-button:focus {
+  outline: none;
+}
+
+.property-nav-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.agent-nav-button {
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(51, 51, 51, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+@media (max-width: 1200px) {
+  .agent-nav-button {
+    left: 10px;
+  }
+}
+
+.agent-nav-button:hover {
+  background-color: rgba(51, 51, 51, 1);
+}
+
+.agent-nav-button:focus {
+  outline: none;
+}
+
+.agent-nav-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.agent-image {
+  transition: opacity 0.3s ease;
+}
+
+.property-image {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .view-card-content {
+    flex-direction: column;
+  }
+  
+  .view-card-left {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .view-card-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .view-card-section {
+    padding: 60px 24px;
+  }
+  
+  .agent-image-container {
+    height: 300px;
+  }
+  
+  .property-overlay {
+    padding: 20px 16px;
+  }
+  
+  .property-price {
+    font-size: 28px;
+  }
+  
+  .property-location {
+    font-size: 18px;
+  }
+  
+  .property-nav-button {
+    width: 40px;
+    height: 40px;
+    right: 12px;
+  }
+}
+

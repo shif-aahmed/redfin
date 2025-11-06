@@ -1,0 +1,167 @@
+.homebuying-guide-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.homebuying-guide-header {
+  width: 100%;
+  background-color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.homebuying-guide-header-line {
+  display: none;
+}
+
+.homebuying-guide-language-btn {
+  padding: 8px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.homebuying-guide-language-btn:hover {
+  background-color: #b71c1c;
+}
+
+.homebuying-guide-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.homebuying-guide-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.homebuying-guide-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.homebuying-guide-heading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+}
+
+.homebuying-guide-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.homebuying-guide-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homebuying-guide-illustration {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+}
+
+.illustration-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.homebuying-guide-bottom-nav {
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 30px 0;
+}
+
+.homebuying-guide-bottom-line {
+  display: none;
+}
+
+.homebuying-guide-nav-links {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.homebuying-guide-nav-link {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.homebuying-guide-nav-link:hover {
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .homebuying-guide-header {
+    padding: 15px 20px;
+  }
+
+  .homebuying-guide-container {
+    padding: 40px 20px;
+  }
+
+  .homebuying-guide-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .homebuying-guide-heading {
+    font-size: 36px;
+  }
+
+  .homebuying-guide-description {
+    font-size: 16px;
+  }
+
+  .homebuying-guide-illustration {
+    height: 400px;
+  }
+
+  .homebuying-guide-nav-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .homebuying-guide-heading {
+    font-size: 28px;
+  }
+
+  .homebuying-guide-illustration {
+    height: 300px;
+  }
+}
+

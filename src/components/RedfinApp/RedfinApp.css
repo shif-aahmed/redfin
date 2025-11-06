@@ -1,0 +1,304 @@
+.redfin-app-section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 80px 24px;
+}
+
+.redfin-app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.redfin-app-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.redfin-app-left {
+  flex: 1;
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.redfin-app-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.redfin-app-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.app-download-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-store-button,
+.google-play-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #000;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.app-store-button:hover,
+.google-play-button:hover {
+  opacity: 0.8;
+}
+
+.app-store-button svg {
+  width: 28px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.google-play-button svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.app-store-text,
+.google-play-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.app-store-label,
+.google-play-label {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.app-store-name,
+.google-play-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.redfin-app-right {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-qr-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-mockup {
+  width: 280px;
+  height: 560px;
+  border: 3px solid #e51937;
+  border-radius: 30px;
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: rotate(-5deg);
+  position: relative;
+  z-index: 1;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.redfin-logo-small {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e51937;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.hamburger-menu {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.phone-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.phone-image-placeholder {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+}
+
+.phone-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.qr-code-overlay {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.qr-code-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border: 8px solid white;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code-placeholder::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, #000 0px, #000 8px, white 8px, white 10px),
+    repeating-linear-gradient(90deg, #000 0px, #000 8px, white 8px, white 10px);
+  background-size: 20px 20px;
+  opacity: 0.9;
+  border-radius: 4px;
+}
+
+.qr-code-placeholder::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #000;
+  border-radius: 4px;
+  top: 10px;
+  left: 10px;
+  box-shadow: 
+    0 0 0 4px white,
+    0 0 0 8px #000,
+    120px 0 0 0 #000,
+    120px 0 0 4px white,
+    120px 0 0 8px #000,
+    0 120px 0 0 #000,
+    0 120px 0 4px white,
+    0 120px 0 8px #000;
+}
+
+.qr-code-text {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .redfin-app-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .redfin-app-left {
+    max-width: 100%;
+  }
+  
+  .redfin-app-right {
+    width: 100%;
+  }
+  
+  .phone-qr-container {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .redfin-app-section {
+    padding: 60px 24px;
+  }
+  
+  .redfin-app-heading {
+    font-size: 36px;
+  }
+  
+  .redfin-app-description {
+    font-size: 16px;
+  }
+  
+  .app-download-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .app-store-button,
+  .google-play-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .phone-mockup {
+    width: 240px;
+    height: 480px;
+  }
+  
+  .qr-code-overlay {
+    right: -40px;
+  }
+  
+  .qr-code-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+}
+

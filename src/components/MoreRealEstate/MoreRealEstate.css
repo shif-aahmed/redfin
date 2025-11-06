@@ -1,0 +1,186 @@
+.more-real-estate-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.more-real-estate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.more-real-estate-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+}
+
+.more-real-estate-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 40px 0;
+}
+
+.state-subtitle {
+  margin-top: 60px;
+}
+
+.cities-grid {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.city-column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.city-link {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.city-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.states-grid {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.state-column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.state-link {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.state-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.show-more-link {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  transition: color 0.2s ease;
+}
+
+.show-more-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.chevron-icon {
+  width: 12px;
+  height: 12px;
+  color: #007bff;
+  flex-shrink: 0;
+}
+
+.show-more-link:hover .chevron-icon {
+  color: #0056b3;
+}
+
+@media (max-width: 992px) {
+  .cities-grid {
+    gap: 40px;
+  }
+  
+  .city-column,
+  .state-column {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .more-real-estate-section {
+    padding: 40px 15px;
+  }
+
+  .more-real-estate-title {
+    font-size: 28px;
+  }
+
+  .more-real-estate-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .cities-grid {
+    gap: 30px;
+  }
+
+  .city-column,
+  .state-column {
+    min-width: 150px;
+  }
+
+  .city-link,
+  .state-link,
+  .show-more-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .more-real-estate-title {
+    font-size: 24px;
+  }
+
+  .more-real-estate-subtitle {
+    font-size: 18px;
+  }
+
+  .cities-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .city-column,
+  .state-column {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .cities-grid,
+  .states-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+

@@ -1,0 +1,91 @@
+.tips-for-new-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.tips-for-new-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tips-for-new-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tips-for-new-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tips-for-new-heading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.tips-for-new-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tips-for-new-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tips-for-new-image-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tips-for-new-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .tips-for-new-section {
+    padding: 60px 24px;
+  }
+
+  .tips-for-new-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .tips-for-new-heading {
+    font-size: 32px;
+  }
+
+  .tips-for-new-left,
+  .tips-for-new-right {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tips-for-new-section {
+    padding: 40px 16px;
+  }
+
+  .tips-for-new-heading {
+    font-size: 28px;
+  }
+}
+
+

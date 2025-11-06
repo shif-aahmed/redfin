@@ -1,0 +1,120 @@
+.get-prequalified-section {
+  width: 100%;
+  background-color: white;
+  padding: 80px 24px;
+}
+
+.get-prequalified-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.get-prequalified-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.get-prequalified-left {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-prequalified-image-container {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.get-prequalified-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.get-prequalified-right {
+  flex: 1;
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.get-prequalified-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.get-prequalified-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.get-prequalified-button {
+  background-color: #e51937;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.get-prequalified-button:hover {
+  background-color: #c4142f;
+}
+
+.get-prequalified-button:focus {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .get-prequalified-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .get-prequalified-left {
+    width: 100%;
+  }
+  
+  .get-prequalified-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .get-prequalified-section {
+    padding: 60px 24px;
+  }
+  
+  .get-prequalified-heading {
+    font-size: 36px;
+  }
+  
+  .get-prequalified-description {
+    font-size: 16px;
+  }
+  
+  .get-prequalified-button {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+
