@@ -5,6 +5,8 @@ import './LasVegasHousesForSale.css'
 function LasVegasHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function LasVegasHousesForSale() {
   return (
     <section className="lasvegas-houses-section">
       <div className="lasvegas-houses-wrapper">
-        <h2 className="lasvegas-houses-title">Las Vegas {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="lasvegas-houses-title">Las Vegas {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="lasvegas-properties-container">
           <div className="lasvegas-properties-scroll-container">
@@ -271,7 +273,7 @@ function LasVegasHousesForSale() {
         </div>
         
         <a href="#" className="lasvegas-see-all-link">
-          See all 8365 Las Vegas {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 8365 Las Vegas {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

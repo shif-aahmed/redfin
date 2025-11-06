@@ -5,6 +5,8 @@ import './WashingtonDCHousesForSale.css'
 function WashingtonDCHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function WashingtonDCHousesForSale() {
   return (
     <section className="washingtondc-houses-section">
       <div className="washingtondc-houses-wrapper">
-        <h2 className="washingtondc-houses-title">Washington, DC {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="washingtondc-houses-title">Washington, DC {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="washingtondc-properties-container">
           <div className="washingtondc-properties-scroll-container">
@@ -264,7 +266,7 @@ function WashingtonDCHousesForSale() {
         </div>
         
         <a href="#" className="washingtondc-see-all-link">
-          See all 3144 Washington, DC {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 3144 Washington, DC {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

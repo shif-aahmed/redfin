@@ -5,6 +5,8 @@ import './SanDiegoHousesForSale.css'
 function SanDiegoHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function SanDiegoHousesForSale() {
   return (
     <section className="sandiego-houses-section">
       <div className="sandiego-houses-wrapper">
-        <h2 className="sandiego-houses-title">San Diego {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="sandiego-houses-title">San Diego {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="sandiego-properties-container">
           <div className="sandiego-properties-scroll-container">
@@ -262,7 +264,7 @@ function SanDiegoHousesForSale() {
         </div>
         
         <a href="#" className="sandiego-see-all-link">
-          See all 2684 San Diego {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 2684 San Diego {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

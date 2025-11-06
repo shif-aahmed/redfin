@@ -59,13 +59,13 @@ function Navbar() {
                     <h3>Union City Searches</h3>
                     <Link to="/homes-for-sale">Homes for sale</Link>
                     <Link to="/condos-for-sale">Condos for sale</Link>
-                    <a href="#">Land for sale</a>
-                    <a href="#">Open houses</a>
+                    <Link to="/land-for-sale">Land for sale</Link>
+                    <Link to="/open-houses">Open houses</Link>
                     <a href="#">Recently sold</a>
                   </div>
                   <div className="dropdown-column">
                     <h3>Buying Options</h3>
-                    <a href="#">Buy with Redfin</a>
+                    <Link to="/buy-with-redfin">Buy with Redfin</Link>
                     <a href="#">Redfin Premier</a>
                   </div>
                   <div className="dropdown-column">
@@ -189,13 +189,13 @@ function Navbar() {
                   <h3>Union City Searches</h3>
                   <Link to="/homes-for-sale" onClick={closeSidebar}>Homes for sale</Link>
                   <Link to="/condos-for-sale" onClick={closeSidebar}>Condos for sale</Link>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Land for sale</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Open houses</a>
+                  <Link to="/land-for-sale" onClick={closeSidebar}>Land for sale</Link>
+                  <Link to="/open-houses" onClick={closeSidebar}>Open houses</Link>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Recently sold</a>
                 </div>
                 <div className="sidebar-submenu-column">
                   <h3>Buying Options</h3>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Buy with Redfin</a>
+                  <Link to="/buy-with-redfin" onClick={closeSidebar}>Buy with Redfin</Link>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Redfin Premier</a>
                 </div>
                 <div className="sidebar-submenu-column">

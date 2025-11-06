@@ -5,6 +5,8 @@ import './SanFranciscoHousesForSale.css'
 function SanFranciscoHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function SanFranciscoHousesForSale() {
   return (
     <section className="sanfrancisco-houses-section">
       <div className="sanfrancisco-houses-wrapper">
-        <h2 className="sanfrancisco-houses-title">San Francisco {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="sanfrancisco-houses-title">San Francisco {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="sanfrancisco-properties-container">
           <div className="sanfrancisco-properties-scroll-container">
@@ -264,7 +266,7 @@ function SanFranciscoHousesForSale() {
         </div>
         
         <a href="#" className="sanfrancisco-see-all-link">
-          See all 5123 San Francisco {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 5123 San Francisco {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

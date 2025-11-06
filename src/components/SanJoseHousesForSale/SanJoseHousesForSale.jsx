@@ -5,6 +5,8 @@ import './SanJoseHousesForSale.css'
 function SanJoseHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function SanJoseHousesForSale() {
   return (
     <section className="sanjose-houses-section">
       <div className="sanjose-houses-wrapper">
-        <h2 className="sanjose-houses-title">San Jose {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="sanjose-houses-title">San Jose {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="sanjose-properties-container">
           <div className="sanjose-properties-scroll-container">
@@ -264,7 +266,7 @@ function SanJoseHousesForSale() {
         </div>
         
         <a href="#" className="sanjose-see-all-link">
-          See all 1035 San Jose {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 1035 San Jose {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

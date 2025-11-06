@@ -5,6 +5,8 @@ import './ChicagoHousesForSale.css'
 function ChicagoHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function ChicagoHousesForSale() {
   return (
     <section className="chicago-houses-section">
       <div className="chicago-houses-wrapper">
-        <h2 className="chicago-houses-title">Chicago {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="chicago-houses-title">Chicago {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="chicago-properties-container">
           <div className="chicago-properties-scroll-container">
@@ -262,7 +264,7 @@ function ChicagoHousesForSale() {
         </div>
         
         <a href="#" className="chicago-see-all-link">
-          See all 6477 Chicago {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 6477 Chicago {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

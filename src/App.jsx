@@ -17,11 +17,15 @@ import Feed from './Pages/Feed'
 import PropertyDetail from './Pages/PropertyDetail'
 import HomesForSale from './Pages/HomesForSale'
 import CondosForSale from './Pages/CondosForSale'
+import LandForSale from './Pages/LandForSale'
+import OpenHouses from './Pages/OpenHouses'
+import BuyWithRedfin from './Pages/BuyWithRedfin'
 import './App.css'
 
 function AppContent() {
   const location = useLocation()
   const isPropertyDetail = location.pathname.startsWith('/property/')
+  const isBuyWithRedfinPage = location.pathname === '/buy-with-redfin'
 
   return (
     <>
@@ -32,18 +36,25 @@ function AppContent() {
         <Route path="/property/:id" element={<PropertyDetail />} />
         <Route path="/homes-for-sale" element={<HomesForSale />} />
         <Route path="/condos-for-sale" element={<CondosForSale />} />
+        <Route path="/land-for-sale" element={<LandForSale />} />
+        <Route path="/open-houses" element={<OpenHouses />} />
+        <Route path="/buy-with-redfin" element={<BuyWithRedfin />} />
       </Routes>
-      <ChicagoHousesForSale />
-      <SeattleHousesForSale />
-      <LosAngelesHousesForSale />
-      <SanDiegoHousesForSale />
-      <PortlandHousesForSale />
-      <WashingtonDCHousesForSale />
-      <SanFranciscoHousesForSale />
-      <SanJoseHousesForSale />
-      <AustinHousesForSale />
-      <LasVegasHousesForSale />
-      <PopularSearchesNearMe />
+      {!isBuyWithRedfinPage && (
+        <>
+          <ChicagoHousesForSale />
+          <SeattleHousesForSale />
+          <LosAngelesHousesForSale />
+          <SanDiegoHousesForSale />
+          <PortlandHousesForSale />
+          <WashingtonDCHousesForSale />
+          <SanFranciscoHousesForSale />
+          <SanJoseHousesForSale />
+          <AustinHousesForSale />
+          <LasVegasHousesForSale />
+          <PopularSearchesNearMe />
+        </>
+      )}
       <Footer />
     </>
   )

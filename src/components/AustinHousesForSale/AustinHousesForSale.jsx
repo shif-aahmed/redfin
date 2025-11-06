@@ -5,6 +5,8 @@ import './AustinHousesForSale.css'
 function AustinHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function AustinHousesForSale() {
   return (
     <section className="austin-houses-section">
       <div className="austin-houses-wrapper">
-        <h2 className="austin-houses-title">Austin {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="austin-houses-title">Austin {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="austin-properties-container">
           <div className="austin-properties-scroll-container">
@@ -264,7 +266,7 @@ function AustinHousesForSale() {
         </div>
         
         <a href="#" className="austin-see-all-link">
-          See all 5505 Austin {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 5505 Austin {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

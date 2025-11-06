@@ -5,6 +5,8 @@ import './PortlandHousesForSale.css'
 function PortlandHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function PortlandHousesForSale() {
   return (
     <section className="portland-houses-section">
       <div className="portland-houses-wrapper">
-        <h2 className="portland-houses-title">Portland {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="portland-houses-title">Portland {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="portland-properties-container">
           <div className="portland-properties-scroll-container">
@@ -262,7 +264,7 @@ function PortlandHousesForSale() {
         </div>
         
         <a href="#" className="portland-see-all-link">
-          See all 3269 Portland {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 3269 Portland {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>

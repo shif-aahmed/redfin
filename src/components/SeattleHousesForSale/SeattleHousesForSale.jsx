@@ -5,6 +5,8 @@ import './SeattleHousesForSale.css'
 function SeattleHousesForSale() {
   const location = useLocation()
   const isCondosPage = location.pathname === '/condos-for-sale'
+  const isLandPage = location.pathname === '/land-for-sale'
+  const isOpenHousesPage = location.pathname === '/open-houses'
   const [favorites, setFavorites] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageIndices, setImageIndices] = useState({})
@@ -156,7 +158,7 @@ function SeattleHousesForSale() {
   return (
     <section className="seattle-houses-section">
       <div className="seattle-houses-wrapper">
-        <h2 className="seattle-houses-title">Seattle {isCondosPage ? 'condos' : 'houses'} for sale</h2>
+        <h2 className="seattle-houses-title">Seattle {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}</h2>
         
         <div className="seattle-properties-container">
           <div className="seattle-properties-scroll-container">
@@ -262,7 +264,7 @@ function SeattleHousesForSale() {
         </div>
         
         <a href="#" className="seattle-see-all-link">
-          See all 2280 Seattle {isCondosPage ? 'condos' : 'houses'} for sale
+          See all 2280 Seattle {isOpenHousesPage ? 'open houses' : isLandPage ? 'land' : isCondosPage ? 'condos' : 'houses'}{isOpenHousesPage ? '' : ' for sale'}
         </a>
       </div>
     </section>
