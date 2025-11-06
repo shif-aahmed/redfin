@@ -1,0 +1,137 @@
+/* Popular Searches Near Me Section - Premium Modern Design with Unique Styling */
+.popular-searches-section {
+  background: #ffffff;
+  padding: 0;
+  position: relative;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.popular-searches-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.popular-searches-title {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 700;
+  color: #2d2d2d;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.popular-searches-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  align-items: center;
+}
+
+.popular-searches-link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #0066cc;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.popular-searches-link:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+.popular-searches-link:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .popular-searches-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  .popular-searches-title {
+    font-size: 1.375rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .popular-searches-links {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-searches-wrapper {
+    padding: 1.25rem 1rem;
+  }
+  
+  .popular-searches-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .popular-searches-links {
+    gap: 1rem;
+  }
+  
+  .popular-searches-link {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Unique protection styling */
+.popular-searches-section[data-component="popular-searches"] {
+  --popular-searches-blue: #0066cc;
+  --popular-searches-blue-hover: #0052a3;
+  --popular-searches-gray: #2d2d2d;
+  --popular-searches-border: #e5e5e5;
+}
+
+/* Print styles */
+@media print {
+  .popular-searches-section {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .popular-searches-link {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .popular-searches-section {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+  }
+  
+  .popular-searches-link {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .popular-searches-link {
+    transition: none;
+  }
+}
+
+/* Focus styles for accessibility */
+.popular-searches-link:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+

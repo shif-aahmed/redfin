@@ -57,8 +57,8 @@ function Navbar() {
                 <div className="dropdown-content">
                   <div className="dropdown-column">
                     <h3>Union City Searches</h3>
-                    <a href="#">Homes for sale</a>
-                    <a href="#">Condos for sale</a>
+                    <Link to="/homes-for-sale">Homes for sale</Link>
+                    <Link to="/condos-for-sale">Condos for sale</Link>
                     <a href="#">Land for sale</a>
                     <a href="#">Open houses</a>
                     <a href="#">Recently sold</a>
@@ -187,8 +187,8 @@ function Navbar() {
               <div className="sidebar-submenu-columns">
                 <div className="sidebar-submenu-column">
                   <h3>Union City Searches</h3>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Homes for sale</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Condos for sale</a>
+                  <Link to="/homes-for-sale" onClick={closeSidebar}>Homes for sale</Link>
+                  <Link to="/condos-for-sale" onClick={closeSidebar}>Condos for sale</Link>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Land for sale</a>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Open houses</a>
                   <a href="#" onClick={(e)=>e.preventDefault()}>Recently sold</a>

@@ -1,0 +1,411 @@
+/* Seattle Houses Section - Premium Modern Design with Unique Styling */
+.seattle-houses-section {
+  background: linear-gradient(to bottom, #fafbfc 0%, #ffffff 100%);
+  padding: 4rem 1.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.seattle-houses-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(16, 128, 162, 0.15), transparent);
+  z-index: 0;
+}
+
+.seattle-houses-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(16, 128, 162, 0.15), transparent);
+  z-index: 0;
+}
+
+.seattle-houses-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.seattle-houses-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.seattle-properties-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.seattle-properties-scroll-container {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.seattle-properties-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.seattle-property-card {
+  flex: 0 0 calc(25% - 1rem);
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  scroll-snap-align: start;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+.seattle-property-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.seattle-property-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seattle-image-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #d1d1d1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.seattle-image-nav-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: #4a4a4a;
+}
+
+
+.seattle-image-nav-left {
+  left: 0.75rem;
+}
+
+.seattle-image-nav-right {
+  right: 0.75rem;
+}
+
+
+.seattle-property-badges {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.seattle-badge {
+  display: inline-block;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.seattle-badge-red {
+  background: #e51937;
+  color: #ffffff;
+}
+
+.seattle-badge-purple {
+  background: #8a2be2;
+  color: #ffffff;
+}
+
+.seattle-favorite-btn {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.seattle-favorite-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: #666;
+  fill: none;
+  transition: all 0.2s ease;
+}
+
+.seattle-favorite-active svg {
+  fill: #e51937;
+  stroke: #e51937;
+}
+
+.seattle-property-details {
+  padding: 1.25rem;
+}
+
+.seattle-property-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.seattle-property-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+.seattle-property-specs {
+  font-size: 0.9375rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.seattle-property-address {
+  font-size: 0.9375rem;
+  color: #666;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seattle-scroll-button {
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background: #ffffff;
+  border: 2px solid #d1d1d1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.seattle-scroll-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #4a4a4a;
+  fill: none;
+}
+
+.seattle-see-all-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1080a2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.seattle-see-all-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1080a2;
+  transition: width 0.3s ease;
+}
+
+.seattle-see-all-link:hover {
+  color: #1080a2;
+}
+
+.seattle-see-all-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .seattle-property-card {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .seattle-houses-section {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .seattle-property-card {
+    flex: 0 0 calc(50% - 0.625rem);
+  }
+  
+  .seattle-properties-scroll-container {
+    gap: 1rem;
+  }
+  
+  .seattle-scroll-button {
+    right: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .seattle-scroll-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seattle-houses-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .seattle-property-card {
+    flex: 0 0 85%;
+  }
+  
+  .seattle-scroll-button {
+    display: none;
+  }
+}
+
+/* Advanced animations and effects */
+@keyframes seattleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seattle-property-card {
+  animation: seattleFadeIn 0.6s ease-out backwards;
+}
+
+.seattle-property-card:nth-child(1) { animation-delay: 0.1s; }
+.seattle-property-card:nth-child(2) { animation-delay: 0.2s; }
+.seattle-property-card:nth-child(3) { animation-delay: 0.3s; }
+.seattle-property-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Unique protection styling */
+.seattle-houses-section[data-component="seattle-listings"] {
+  --seattle-primary-blue: #1080a2;
+  --seattle-secondary-blue: #0d6a85;
+  --seattle-purple-accent: #8a2be2;
+  --seattle-shadow-light: rgba(0, 0, 0, 0.08);
+  --seattle-shadow-medium: rgba(0, 0, 0, 0.12);
+}
+
+/* Print styles */
+@media print {
+  .seattle-houses-section {
+    background: white;
+    padding: 2rem;
+  }
+  
+  .seattle-scroll-button {
+    display: none;
+  }
+  
+  .seattle-properties-scroll-container {
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .seattle-property-card {
+    border-width: 2px;
+  }
+  
+  .seattle-badge {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .seattle-property-card,
+  .seattle-property-image,
+  .seattle-favorite-btn,
+  .seattle-scroll-button {
+    transition: none;
+    animation: none;
+  }
+  
+  .seattle-properties-scroll-container {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus styles for accessibility */
+.seattle-property-card:focus-within {
+  outline: none;
+}
+
+.seattle-favorite-btn:focus,
+.seattle-scroll-button:focus,
+.seattle-image-nav-btn:focus,
+.seattle-see-all-link:focus {
+  outline: none;
+}
+
