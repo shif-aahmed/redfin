@@ -24,6 +24,16 @@ import RedfinPremier from './Pages/RedfinPremier'
 import HomebuyingGuide from './Pages/HomebuyingGuide'
 import FreeHomeBuyingClasses from './Pages/FreeHomeBuyingClasses'
 import USHousingMarket from './Pages/USHousingMarket'
+import RenterDashboard from './Pages/RenterDashboard'
+import RentalToolDashboard from './Pages/RentalToolDashboard'
+import RentalMarketNews from './Pages/RentalMarketNews'
+import RentalMarketTrends from './Pages/RentalMarketTrends'
+import HowMuchRent from './Pages/HowMuchRent'
+import ShouldIRentOrBuy from './Pages/ShouldIRentOrBuy'
+import RenterGuide from './Pages/RenterGuide'
+import ListMyHomeForRent from './Pages/ListMyHomeForRent'
+import ShouldISellOrRent from './Pages/ShouldISellOrRent'
+import WhatsMyHomeWorth from './Pages/WhatsMyHomeWorth'
 import './App.css'
 
 function AppContent() {
@@ -34,10 +44,20 @@ function AppContent() {
   const isHomebuyingGuidePage = location.pathname === '/homebuying-guide'
   const isFreeHomeBuyingClassesPage = location.pathname === '/free-home-buying-classes'
   const isUSHousingMarketPage = location.pathname === '/us-housing-market'
+  const isRenterDashboardPage = location.pathname === '/renter-dashboard'
+  const isRentalMarketNewsPage = location.pathname === '/rental-market-news'
+  const isRentalMarketTrendsPage = location.pathname === '/rental-market-trends'
+  const isHowMuchRentPage = location.pathname === '/how-much-rent'
+  const isShouldIRentOrBuyPage = location.pathname === '/should-i-rent-or-buy'
+  const isRenterGuidePage = location.pathname === '/renter-guide'
+  const isListMyHomeForRentPage = location.pathname === '/list-my-home-for-rent'
+  const isRentalToolDashboardPage = location.pathname === '/rental-tool-dashboard'
+  const isShouldISellOrRentPage = location.pathname === '/should-i-sell-or-rent'
+  const isWhatsMyHomeWorthPage = location.pathname === '/whats-my-home-worth'
 
   return (
     <>
-      <Navbar />
+      {!isRenterDashboardPage && !isRentalToolDashboardPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/feed" element={<Feed />} />
@@ -51,8 +71,18 @@ function AppContent() {
         <Route path="/homebuying-guide" element={<HomebuyingGuide />} />
         <Route path="/free-home-buying-classes" element={<FreeHomeBuyingClasses />} />
         <Route path="/us-housing-market" element={<USHousingMarket />} />
+        <Route path="/renter-dashboard" element={<RenterDashboard />} />
+        <Route path="/rental-tool-dashboard" element={<RentalToolDashboard />} />
+        <Route path="/rental-market-news" element={<RentalMarketNews />} />
+        <Route path="/rental-market-trends" element={<RentalMarketTrends />} />
+        <Route path="/how-much-rent" element={<HowMuchRent />} />
+        <Route path="/should-i-rent-or-buy" element={<ShouldIRentOrBuy />} />
+        <Route path="/renter-guide" element={<RenterGuide />} />
+        <Route path="/list-my-home-for-rent" element={<ListMyHomeForRent />} />
+        <Route path="/should-i-sell-or-rent" element={<ShouldISellOrRent />} />
+        <Route path="/whats-my-home-worth" element={<WhatsMyHomeWorth />} />
       </Routes>
-      {!isBuyWithRedfinPage && !isRedfinPremierPage && !isHomebuyingGuidePage && !isFreeHomeBuyingClassesPage && !isUSHousingMarketPage && (
+      {!isBuyWithRedfinPage && !isRedfinPremierPage && !isHomebuyingGuidePage && !isFreeHomeBuyingClassesPage && !isUSHousingMarketPage && !isRenterDashboardPage && !isRentalToolDashboardPage && !isRentalMarketNewsPage && !isRentalMarketTrendsPage && !isHowMuchRentPage && !isShouldIRentOrBuyPage && !isRenterGuidePage && !isListMyHomeForRentPage && !isShouldISellOrRentPage && !isWhatsMyHomeWorthPage && (
         <>
           <ChicagoHousesForSale />
           <SeattleHousesForSale />
@@ -67,7 +97,7 @@ function AppContent() {
           <PopularSearchesNearMe />
         </>
       )}
-      {!isFreeHomeBuyingClassesPage && <Footer />}
+      {!isFreeHomeBuyingClassesPage && !isRenterDashboardPage && !isRentalToolDashboardPage && !isRentalMarketTrendsPage && !isShouldISellOrRentPage && <Footer />}
     </>
   )
 }

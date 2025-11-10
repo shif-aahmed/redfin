@@ -1,0 +1,521 @@
+.renter-guide-page {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: #2c2c2c;
+}
+
+.renter-guide-hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 24px 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.renter-guide-hero-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+  padding: 48px 64px;
+  border-radius: 12px;
+  max-width: 640px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+}
+
+.renter-guide-hero-card h1 {
+  font-size: 44px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 16px;
+}
+
+.renter-guide-hero-divider {
+  display: inline-block;
+  width: 48px;
+  height: 3px;
+  background-color: #d81e05;
+  margin-bottom: 18px;
+}
+
+.renter-guide-hero-card p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.renter-guide-section {
+  padding: 72px 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.renter-guide-section-intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 48px;
+}
+
+.renter-guide-section-intro h2 {
+  font-size: 36px;
+  margin-bottom: 18px;
+  color: #2c2c2c;
+}
+
+.renter-guide-section-intro p {
+  font-size: 18px;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.renter-guide-columns,
+.renter-guide-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.renter-guide-column,
+.renter-guide-step {
+  background-color: #f8f8f8;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.renter-guide-column h3,
+.renter-guide-step h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #2c2c2c;
+}
+
+.renter-guide-column p,
+.renter-guide-step p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4f4f4f;
+}
+
+.renter-guide-alt {
+  background-color: #fdf8f4;
+}
+
+.renter-guide-resources {
+  padding: 72px 24px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.renter-guide-resources-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 48px;
+}
+
+.renter-guide-resources-header h2 {
+  font-size: 36px;
+  margin-bottom: 18px;
+  color: #2c2c2c;
+}
+
+.renter-guide-resources-header p {
+  font-size: 18px;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.renter-guide-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.renter-guide-resource-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.renter-guide-resource-card:hover {
+  transform: translateY(-6px);
+}
+
+.renter-guide-resource-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.renter-guide-image-one {
+  background-image: url('https://images.unsplash.com/photo-1520785643438-3f8a5fbc108b?auto=format&fit=crop&w=1200&q=80');
+}
+
+.renter-guide-image-two {
+  background-image: url('https://images.unsplash.com/photo-1505691723518-36a1ecbfee63?auto=format&fit=crop&w=1200&q=80');
+}
+
+.renter-guide-image-three {
+  background-image: url('https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=1200&q=80');
+}
+
+.renter-guide-resource-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.renter-guide-resource-content h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  color: #2c2c2c;
+}
+
+.renter-guide-resource-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4f4f4f;
+  flex: 1;
+}
+
+.renter-guide-resource-link {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: #007c8f;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.renter-guide-resource-link:hover {
+  text-decoration: underline;
+}
+
+.renter-guide-articles {
+  padding: 80px 24px 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.renter-guide-articles-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.renter-guide-articles-header h2 {
+  font-size: 40px;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+}
+
+.renter-guide-articles-header h3 {
+  font-size: 24px;
+  color: #3c3c3c;
+  font-weight: 600;
+}
+
+.renter-guide-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.renter-guide-article-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.renter-guide-article-card h4 {
+  font-size: 22px;
+  color: #2c2c2c;
+  line-height: 1.4;
+}
+
+.renter-guide-article-card p {
+  font-size: 16px;
+  color: #4f4f4f;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.renter-guide-article-link {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #007c8f;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.renter-guide-article-link:hover {
+  text-decoration: underline;
+}
+
+.renter-guide-tips {
+  padding: 80px 24px 0;
+  margin: 0 auto 60px;
+}
+
+.renter-guide-tips-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.renter-guide-tips-header h3 {
+  font-size: 28px;
+  color: #2c2c2c;
+}
+
+.renter-guide-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.renter-guide-tip-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.renter-guide-tip-card h4 {
+  font-size: 20px;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+.renter-guide-tip-card p {
+  font-size: 16px;
+  color: #4f4f4f;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.renter-guide-tip-link {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #007c8f;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.renter-guide-tip-link:hover {
+  text-decoration: underline;
+}
+
+.renter-guide-search {
+  padding: 88px 24px 120px;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.renter-guide-search-header h2 {
+  font-size: 36px;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+}
+
+.renter-guide-search-header p {
+  font-size: 18px;
+  color: #4a4a4a;
+  margin-bottom: 32px;
+}
+
+.renter-guide-search-bar {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 480px;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.renter-guide-search-bar input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.renter-guide-search-bar button {
+  background-color: #d81e05;
+  border: none;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.renter-guide-search-bar button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.renter-guide-search-cities {
+  text-align: left;
+}
+
+.renter-guide-search-heading {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.renter-guide-search-heading h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.renter-guide-search-heading a {
+  font-size: 15px;
+  color: #007c8f;
+}
+
+.renter-guide-search-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px 40px;
+  margin-bottom: 24px;
+}
+
+.renter-guide-search-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.renter-guide-search-list a {
+  color: #007c8f;
+  font-size: 15px;
+}
+
+.renter-guide-search-more {
+  border: none;
+  background: none;
+  color: #007c8f;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.renter-guide-search-more::after {
+  content: '\25BC';
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .renter-guide-columns,
+  .renter-guide-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .renter-guide-hero-card {
+    padding: 40px 48px;
+  }
+
+  .renter-guide-resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .renter-guide-articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .renter-guide-tips-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .renter-guide-search-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .renter-guide-hero {
+    padding: 100px 16px 120px;
+  }
+
+  .renter-guide-hero-card h1 {
+    font-size: 32px;
+  }
+
+  .renter-guide-section {
+    padding: 56px 16px;
+  }
+
+  .renter-guide-section-intro h2 {
+    font-size: 28px;
+  }
+
+  .renter-guide-columns,
+  .renter-guide-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .renter-guide-resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .renter-guide-articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .renter-guide-tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .renter-guide-search-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .renter-guide-hero-card {
+    padding: 32px;
+  }
+
+  .renter-guide-section-intro p {
+    font-size: 16px;
+  }
+
+  .renter-guide-search-list {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,680 @@
+.rent-vs-buy-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FAF9F7;
+  padding: 60px 20px;
+}
+
+.rent-vs-buy-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.rent-vs-buy-header {
+  margin-bottom: 40px;
+}
+
+.rent-vs-buy-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 10px 0;
+}
+
+.rent-vs-buy-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555555;
+  margin: 0;
+}
+
+.rent-vs-buy-content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Left Sidebar - Input Section */
+.input-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.input-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+
+.input-group {
+  margin-bottom: 30px;
+}
+
+.input-group:last-child {
+  margin-bottom: 0;
+}
+
+.input-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  color: #333333;
+  padding: 12px 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4DB8BC;
+}
+
+.input-field::placeholder {
+  color: #AAAAAA;
+}
+
+.duration-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #4DB8BC 0%, #4DB8BC calc(var(--value, 23.3%) - 1%), #E0E0E0 var(--value, 23.3%), #E0E0E0 100%);
+  outline: none;
+  margin: 15px 0 10px 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.duration-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #4DB8BC;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.duration-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #4DB8BC;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.input-helper-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  color: #888888;
+  margin: 8px 0 0 0;
+}
+
+.expandable-section-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.section-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  color: #555555;
+  transition: transform 0.3s ease;
+}
+
+.chevron-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.expandable-section-content {
+  margin-top: 15px;
+}
+
+.nested-input-group {
+  margin-top: 15px;
+}
+
+.nested-input-group .input-label {
+  margin-bottom: 10px;
+}
+
+.price-input {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.calculator-link {
+  color: #D32F2F;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.calculator-link:hover {
+  color: #B71C1C;
+  text-decoration: underline;
+}
+
+.section-divider {
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 25px 0;
+}
+
+.dual-input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.dual-input-left {
+  flex: 2;
+}
+
+.dual-input-right {
+  flex: 1;
+}
+
+.advanced-options-divider {
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 25px 0 20px 0;
+}
+
+.show-advanced-options-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.show-advanced-options-btn:hover {
+  opacity: 0.8;
+}
+
+.advanced-options-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4DB8BC;
+}
+
+.advanced-options-content {
+  margin-top: 20px;
+}
+
+.advanced-options-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-field {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+/* Right Section - Results */
+.results-section {
+  background: transparent;
+}
+
+.results-conclusion {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 30px 0;
+}
+
+.highlight-amount {
+  color: #D32F2F;
+}
+
+.comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.comparison-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+}
+
+.monthly-average {
+  margin-bottom: 25px;
+}
+
+.monthly-average .amount {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.monthly-average .period {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  margin-left: 5px;
+}
+
+.cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cost-row.total-row {
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #E0E0E0;
+}
+
+.cost-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.cost-label.dotted-underline {
+  border-bottom: 1px dotted #AAAAAA;
+  cursor: help;
+}
+
+.cost-value {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.cost-value.negative {
+  color: #D32F2F;
+}
+
+.total-row .cost-label,
+.total-row .cost-value {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Take the next step section */
+.next-step-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+}
+
+.next-step-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+}
+
+.next-step-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #333333;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.next-step-item:hover {
+  background-color: #F5F5F5;
+}
+
+.next-step-icon {
+  width: 24px;
+  height: 24px;
+  color: #333333;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.next-step-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.next-step-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  flex: 1;
+}
+
+.next-step-chevron {
+  width: 8px;
+  height: 12px;
+  color: #333333;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.next-step-divider {
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 5px 0;
+}
+
+/* Additional resources section */
+.additional-resources-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+}
+
+.additional-resources-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #333333;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.resource-item:hover {
+  background-color: #F5F5F5;
+}
+
+.resource-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.resource-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resource-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  flex: 1;
+}
+
+.resource-chevron {
+  width: 8px;
+  height: 12px;
+  color: #333333;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.resource-divider {
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 5px 0;
+}
+
+/* How we calculate section */
+.calculation-info-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+}
+
+.calculation-info-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+.calculation-intro {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0 0 30px 0;
+}
+
+.calculation-subsection {
+  margin-bottom: 25px;
+}
+
+.calculation-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.calculation-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 10px 0;
+}
+
+.calculation-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0 0 15px 0;
+}
+
+.calculation-text:last-child {
+  margin-bottom: 0;
+}
+
+.calculation-text strong {
+  font-weight: 600;
+  color: #333333;
+}
+
+.calculation-major-section {
+  margin: 40px 0 25px 0;
+}
+
+.calculation-section-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.calculation-numbered-section {
+  margin-bottom: 30px;
+}
+
+.calculation-numbered-section:last-child {
+  margin-bottom: 0;
+}
+
+.calculation-numbered-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 12px 0;
+}
+
+@media (max-width: 1200px) {
+  .rent-vs-buy-content {
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rent-vs-buy-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .input-sidebar {
+    position: static;
+  }
+
+  .input-card {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .rent-vs-buy-page {
+    padding: 40px 15px;
+  }
+
+  .rent-vs-buy-title {
+    font-size: 28px;
+  }
+
+  .rent-vs-buy-subtitle {
+    font-size: 16px;
+  }
+
+  .results-conclusion {
+    font-size: 22px;
+  }
+
+  .comparison-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .input-card,
+  .comparison-card {
+    padding: 20px;
+  }
+
+  .monthly-average .amount {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rent-vs-buy-title {
+    font-size: 24px;
+  }
+
+  .rent-vs-buy-subtitle {
+    font-size: 15px;
+  }
+
+  .results-conclusion {
+    font-size: 20px;
+  }
+
+  .monthly-average .amount {
+    font-size: 28px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+}
+

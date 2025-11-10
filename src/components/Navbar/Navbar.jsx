@@ -6,6 +6,7 @@ import logo from '../../assets/logo.png'
 function Navbar() {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const isRentalMarketNewsPage = location.pathname === '/rental-market-news'
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [authOpen, setAuthOpen] = useState(false)
   const [expandedSidebar, setExpandedSidebar] = useState({ Buy: false, Rent: false, Sell: false, Mortgage: false, Agents: false })
@@ -29,8 +30,9 @@ function Navbar() {
         <div className="navbar-left">
           <Link to="/" className="logo-container">
             <img src={logo} alt="Redfin" className="logo" />
+            {isRentalMarketNewsPage && <span className="news-text">News</span>}
           </Link>
-          {!isHomePage && (
+          {!isHomePage && !isRentalMarketNewsPage && (
             <div className="navbar-search">
               <div className="navbar-search-input-container">
                 <input 
@@ -83,17 +85,19 @@ function Navbar() {
               <div className="dropdown-menu">
                 <div className="dropdown-content">
                   <div className="dropdown-column">
-                    <h3>Rental Searches</h3>
-                    <a href="#">Apartments for rent</a>
-                    <a href="#">Houses for rent</a>
-                    <a href="#">Condos for rent</a>
-                    <a href="#">Townhomes for rent</a>
+                    <h3>Rental Resources</h3>
+                    <Link to="/renter-dashboard">Renter Dashboard</Link>
+                    <Link to="/rental-market-news">Rental Market Tracker</Link>
+                    <Link to="/how-much-rent">How much rent can I afford?</Link>
+                    <Link to="/should-i-rent-or-buy">Should I rent or buy?</Link>
+                    <Link to="/renter-guide">Renter guide</Link>
                   </div>
                   <div className="dropdown-column">
-                    <h3>Rental Resources</h3>
-                    <a href="#">Rent vs Buy calculator</a>
-                    <a href="#">Rental guide</a>
-                    <a href="#">Rental market trends</a>
+                    <h3>Redfin Rental Tools</h3>
+                    <Link to="/list-my-home-for-rent">List my home for rent</Link>
+                    <Link to="/rental-tool-dashboard">Rental tool dashboard</Link>
+                    <Link to="/rental-market-trends">US rental market trends</Link>
+                    <Link to="/should-i-sell-or-rent">Should I sell or rent my home?</Link>
                   </div>
                 </div>
               </div>
@@ -104,7 +108,7 @@ function Navbar() {
                 <div className="dropdown-content">
                   <div className="dropdown-column">
                     <h3>Selling Options</h3>
-                    <a href="#">Sell with Redfin</a>
+                    <Link to="/whats-my-home-worth">What's my home worth?</Link>
                     <Link to="/redfin-premier">Redfin Premier</Link>
                     <a href="#">RedfinNow</a>
                   </div>
@@ -217,17 +221,19 @@ function Navbar() {
             <div className="sidebar-accordion">
               <div className="sidebar-submenu-columns">
                 <div className="sidebar-submenu-column">
-                  <h3>Rental Searches</h3>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Apartments for rent</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Houses for rent</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Condos for rent</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Townhomes for rent</a>
+                  <h3>Rental Resources</h3>
+                  <Link to="/renter-dashboard" onClick={closeSidebar}>Renter Dashboard</Link>
+                  <Link to="/rental-market-news" onClick={closeSidebar}>Rental Market Tracker</Link>
+                  <Link to="/how-much-rent" onClick={closeSidebar}>How much rent can I afford?</Link>
+                  <Link to="/should-i-rent-or-buy" onClick={closeSidebar}>Should I rent or buy?</Link>
+                  <Link to="/renter-guide" onClick={closeSidebar}>Renter guide</Link>
                 </div>
                 <div className="sidebar-submenu-column">
                   <h3>Rental Resources</h3>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Rent vs Buy calculator</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Rental guide</a>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Rental market trends</a>
+                    <Link to="/list-my-home-for-rent" onClick={closeSidebar}>List my home for rent</Link>
+                    <Link to="/rental-tool-dashboard" onClick={closeSidebar}>Rental tool dashboard</Link>
+                    <Link to="/rental-market-trends" onClick={closeSidebar}>US rental market trends</Link>
+                  <Link to="/should-i-sell-or-rent" onClick={closeSidebar}>Should I sell or rent my home?</Link>
                 </div>
               </div>
             </div>
@@ -242,7 +248,7 @@ function Navbar() {
               <div className="sidebar-submenu-columns">
                 <div className="sidebar-submenu-column">
                   <h3>Selling Options</h3>
-                  <a href="#" onClick={(e)=>e.preventDefault()}>Sell with Redfin</a>
+                  <Link to="/whats-my-home-worth" onClick={closeSidebar}>What's my home worth?</Link>
                   <Link to="/redfin-premier" onClick={closeSidebar}>Redfin Premier</Link>
                   <a href="#" onClick={(e)=>e.preventDefault()}>RedfinNow</a>
                 </div>
